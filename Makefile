@@ -25,4 +25,5 @@ release:
 	@git tag `semver tag`
 	@git push origin `semver tag`
 	@GIT_CB=$(git symbolic-ref --short HEAD) && git push -u ${RELEASE_REMOTE} $(GIT_CB)
+	@python setup.py sdist bdist_wheel --universal
 	@twine upload dist/*
