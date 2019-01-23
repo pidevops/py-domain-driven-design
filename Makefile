@@ -19,4 +19,10 @@ tag: install-semver
 # Tag git with last release
 release:
 	@git add .
-	@git commit -m "releasing `semver tag`"
+	@(git commit -m "releasing `semver tag`") || true
+	@(git tag --delete `semver tag`) || true
+	@(git push --delete origin `semver tag`) || true
+	@git tag `semver tag`
+	@git push origin `semver tag`
+	@GIT_CB=$(git symbolic-ref --short HEAD) && git push -u ${RELEASE_REMOTE} $(GIT_CB)
+	@twine upload dist/*
