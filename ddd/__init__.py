@@ -3,4 +3,4 @@
 # pip install twine
 # python setup.py sdist bdist_wheel --universal
 # twine upload dist/*
-__version__ = '0.0.1'
+__version__ = '0.0.2'

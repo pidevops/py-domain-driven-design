@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='domain-driven-design',
-    version='0.0.1',
+    version='0.0.2',
     license='MIT',
     description='A module to develop easily in Domain Driven Design in python project.',
     url='https://github.com/pidevops/py-domain-driven-design.git',
