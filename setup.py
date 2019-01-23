@@ -8,7 +8,7 @@ setup(
     version='0.0.1',
     license='MIT',
     description='A module to develop easily in Domain Driven Design in python project.',
-    url='https://github.com/pidevops/py-domain-driven-design',
+    url='https://github.com/pidevops/py-domain-driven-design.git',
     author='Etienne de Longeaux',
     author_email='etienne.delongeaux@gmail.fr',
     packages=['ddd'],
