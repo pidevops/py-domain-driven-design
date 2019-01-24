@@ -12,9 +12,9 @@ tag: install-semver
 	@echo Releasing sources
 	@sed -i -r "s/([0-9]+\.[0-9]+\.[0-9]+)/`semver tag`/g" \
 	    setup.py \
-		ddd-domain-driven-design/__init__.py
+		ddd_domain_driven_design/__init__.py
 	@sed -i -r "s/version='v/version='/g" setup.py
-	@sed -i -r "s/__version__ = 'v/__version__ = '/g" ddd/__init__.py
+	@sed -i -r "s/__version__ = 'v/__version__ = '/g" ddd_domain_driven_design/__init__.py
 
 # Tag git with last release
 # https://gist.github.com/gboeing/dcfaf5e13fad16fc500717a3a324ec17
