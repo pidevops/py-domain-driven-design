@@ -12,11 +12,13 @@ tag: install-semver
 	@echo Releasing sources
 	@sed -i -r "s/([0-9]+\.[0-9]+\.[0-9]+)/`semver tag`/g" \
 	    setup.py \
-		ddd/__init__.py
+		ddd-domain-driven-design/__init__.py
 	@sed -i -r "s/version='v/version='/g" setup.py
 	@sed -i -r "s/__version__ = 'v/__version__ = '/g" ddd/__init__.py
 
 # Tag git with last release
+# https://gist.github.com/gboeing/dcfaf5e13fad16fc500717a3a324ec17
+# https://github.com/pypa/twine
 release:
 	@git add .
 	@(git commit -m "releasing `semver tag`") || true
@@ -25,6 +27,6 @@ release:
 	@git tag `semver tag`
 	@git push origin `semver tag`
 	@GIT_CB=$(git symbolic-ref --short HEAD) && git push -u ${RELEASE_REMOTE} $(GIT_CB)
-	@rm -rf dist/*
+	@rm -rf dist build ddd_domain_driven_design.egg-info
 	@python setup.py sdist bdist_wheel --universal
 	@twine upload dist/*

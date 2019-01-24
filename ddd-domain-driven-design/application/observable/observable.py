@@ -1,8 +1,8 @@
 from zope.interface import implementer
 from typing import Union
-from ddd.application.dto.generalisation.dto import DTO
-from ddd.application.observable.generalisation.interface.observable import ObservableInterface
-from ddd.application.observable.generalisation.interface.observer import ObserverInterface
+from ..dto.generalisation.dto import DTO
+from .generalisation.interface.observable import ObservableInterface
+from .generalisation.interface.observer import ObserverInterface
 
 
 @implementer(ObservableInterface)

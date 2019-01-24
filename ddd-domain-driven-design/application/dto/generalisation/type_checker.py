@@ -1,6 +1,6 @@
 import datetime
 from typing import Union, Dict, List
-from ddd.application.dto.generalisation import dto
+from . import dto
 
 
 def _raise_value_not_valid_type(dto_descriptor, value):

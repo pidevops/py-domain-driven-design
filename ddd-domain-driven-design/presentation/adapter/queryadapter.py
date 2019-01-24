@@ -1,7 +1,7 @@
 from zope.interface import implementer
-from ddd.presentation.request.generalisation.interface.request import RequestInterface
-from ddd.presentation.adapter.generalisation.interface.queryadapter import QueryAdapterInterface
-from ddd.application.dto.generalisation.dto import DTO
+from ...presentation.request.generalisation.interface.request import RequestInterface
+from ...presentation.adapter.generalisation.interface.queryadapter import QueryAdapterInterface
+from ...application.dto.generalisation.dto import DTO
 
 
 @implementer(QueryAdapterInterface)

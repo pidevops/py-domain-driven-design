@@ -1,5 +1,5 @@
-from ddd.application.dto.generalisation import type_checker
-from ddd.application.dto.generalisation.dtodescriptor import DTODescriptor
+from . import type_checker
+from .dtodescriptor import DTODescriptor
 
 class DTOMeta(type):
 

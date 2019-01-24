@@ -1,8 +1,8 @@
 """Interface to create observable handler"""
 from zope.interface import Interface
 from typing import Union
-from ddd.application.dto.generalisation.dto import DTO
-from ddd.application.observable.generalisation.interface.observer import ObserverInterface
+from ....dto.generalisation.dto import DTO
+from .observer import ObserverInterface
 
 
 class ObservableInterface(Interface):

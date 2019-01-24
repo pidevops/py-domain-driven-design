@@ -1,5 +1,5 @@
 import json
-from ddd.application.dto.generalisation.dtometa import DTOMeta
+from .dtometa import DTOMeta
 
 
 class DTO(metaclass=DTOMeta):

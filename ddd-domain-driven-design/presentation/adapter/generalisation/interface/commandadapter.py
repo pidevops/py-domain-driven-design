@@ -1,6 +1,6 @@
 """Define Command interface for adapter"""
 from zope.interface import Interface
-from ddd.presentation.request.generalisation.interface.request import RequestInterface
+from ....request.generalisation.interface.request import RequestInterface
 
 
 class CommandAdapterInterface(Interface):

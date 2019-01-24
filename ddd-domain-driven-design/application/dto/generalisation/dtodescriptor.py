@@ -1,4 +1,4 @@
-from ddd.application.dto.generalisation import type_checker
+from . import type_checker
 
 
 class DTODescriptor:
